@@ -1,0 +1,6 @@
+# robots.txt for virtuesextractor.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://virtuesextractor.com/sitemap.xml

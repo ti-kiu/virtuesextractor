@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "VirtuesExtractor.com",
+  "url": "https://virtuesextractor.com",
+  "description": "Discover your seven soul virtues with AI-powered deep analysis. Free 66-question personality test.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://virtuesextractor.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}

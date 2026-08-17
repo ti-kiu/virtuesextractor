@@ -32,8 +32,8 @@ const faqs = [
 function FAQItem({ q, a, isOpen, onClick }: { q: string; a: string; isOpen: boolean; onClick: () => void }) {
   return (
     <div className="card-dark overflow-hidden">
-      <button className="w-full flex items-center justify-between p-5 text-left" onClick={onClick}>
-        <span className="font-heading font-semibold text-base pr-4" style={{color: 'var(--text-primary)'}}>{q}</span>
+      <button className="w-full flex items-center justify-between p-5 text-center" onClick={onClick}>
+        <span className="font-heading font-semibold text-base text-center" style={{color: 'var(--text-primary)'}}>{q}</span>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="shrink-0 transition-transform duration-200" style={{transform: isOpen ? 'rotate(180deg)' : 'rotate(0)'}}>
           <path d="M5 7.5l5 5 5-5" stroke="var(--text-muted)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

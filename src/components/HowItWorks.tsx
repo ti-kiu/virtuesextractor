@@ -198,7 +198,7 @@ export default function HowItWorks() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <Link href="/test" className="btn-primary text-base">
+          <Link href="/quiz" className="btn-primary text-base">
             Start Your Soul Journey
           </Link>
         </div>

@@ -16,7 +16,7 @@ export default function FinalCTA() {
         <p className="text-lg mb-8" style={{color: 'var(--text-secondary)'}}>
           66 questions. 8 minutes. A result that might change how you see yourself.
         </p>
-        <Link href="/test" className="btn-primary text-lg inline-flex">
+        <Link href="/quiz" className="btn-primary text-lg inline-flex">
           Discover Your Virtues — Free
         </Link>
       </div>

@@ -58,7 +58,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link href="/test" className="btn-primary text-sm !py-2.5 !px-5">
+            <Link href="/quiz" className="btn-primary text-sm !py-2.5 !px-5">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v14M1 8h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
               Start Free
             </Link>

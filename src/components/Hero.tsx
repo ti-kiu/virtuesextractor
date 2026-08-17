@@ -124,7 +124,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
-              <Link href="/test" className="btn-primary text-base">
+              <Link href="/quiz" className="btn-primary text-base">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <path d="M9 1v16M1 9h16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
                 </svg>

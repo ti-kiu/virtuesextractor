@@ -101,7 +101,7 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <Link href="/test" className={plan.popular ? "btn-primary w-full text-center text-sm" : "btn-secondary w-full text-center text-sm"}>
+              <Link href="/quiz" className={plan.popular ? "btn-primary w-full text-center text-sm" : "btn-secondary w-full text-center text-sm"}>
                 {plan.cta}
               </Link>
             </div>

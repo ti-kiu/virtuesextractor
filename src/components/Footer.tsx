@@ -49,7 +49,6 @@ export default function Footer() {
                 { href: "/circle", label: "Family Circle" },
                 { href: "/couple", label: "Couple Match" },
                 { href: "/team", label: "Team Building" },
-                { href: "/pricing", label: "Pricing" },
                 { href: "/faq", label: "FAQ" },
               ].map((link) => (
                 <li key={link.href}>

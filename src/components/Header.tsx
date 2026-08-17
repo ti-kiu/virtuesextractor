@@ -61,9 +61,6 @@ export default function Header() {
             <Link href="/team" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
               Team Building
             </Link>
-            <Link href="/pricing" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
-              Pricing
-            </Link>
             <Link href="/faq" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
               FAQ
             </Link>
@@ -90,7 +87,6 @@ export default function Header() {
               <Link href="/circle" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Family Circle</Link>
               <Link href="/couple" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Couple Match</Link>
               <Link href="/team" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Team Building</Link>
-              <Link href="/pricing" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Pricing</Link>
               <Link href="/faq" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>FAQ</Link>
             </div>
           </div>

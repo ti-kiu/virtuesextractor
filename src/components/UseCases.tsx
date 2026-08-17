@@ -1,67 +1,54 @@
 "use client";
 
-const useCases = [
+const cases = [
   {
-    title: "Self-Discovery",
-    story: "I always thought I was just 'lazy' about my goals. The test showed me my Determination was actually 82% — but my Patience was only 23%. I wasn't lazy, I was impatient. That one insight changed how I approach everything.",
-    virtue: "Determination · Patience",
-    icon: "🔍",
+    title: "Career Decisions",
+    description: "'I didn\'t know why I kept burning out until I saw my Patience was 31% and my Determination was 94%. I was pushing too hard, too fast.'",
+    person: "Marketing Manager, 28",
+    color: "#FF6B6B",
   },
   {
-    title: "Relationship Compatibility",
-    story: "My partner and I kept fighting about the same things. When we compared results, the AI showed us exactly where we complement each other — and where the friction comes from. Now we have a shared language for our differences.",
-    virtue: "Kindness · Justice",
-    icon: "💑",
+    title: "Relationship Clarity",
+    description: "'My partner and I both took the test. Seeing our virtue profiles side by side explained 90% of our arguments.'",
+    person: "Together 4 years",
+    color: "#4ECDC4",
   },
   {
-    title: "Family Growth",
-    story: "We don't talk about feelings in my family. The family circle gave us a safe way to understand each other. My dad's Integrity score explained why he's so rigid about rules — and why that's actually a strength.",
-    virtue: "Integrity · Perseverance",
-    icon: "👨‍👩‍👧‍👦",
-  },
-  {
-    title: "Team Building",
-    story: "Our team had blind spots we couldn't see. The team report showed us we were all high in Bravery but low in Patience. We were charging ahead without listening. Now we pause before acting.",
-    virtue: "Bravery · Patience",
-    icon: "🏢",
+    title: "Self-Understanding",
+    description: "\"The AI asked me a question about my childhood that I'd never considered. That's when the report stopped being a test and became a mirror.\"",
+    person: "College Student, 21",
+    color: "#FFE66D",
   },
 ];
 
 export default function UseCases() {
   return (
-    <section className="py-24 bg-bg-primary">
+    <section className="py-20 sm:py-28 relative" style={{background: 'var(--bg-primary)'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-heading font-bold text-h2 text-text-primary mb-4">
-            Real Stories, Real Insights
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style={{background: 'rgba(255,230,109,0.08)', border: '1px solid rgba(255,230,109,0.15)'}}>
+            <span className="text-xs font-mono font-medium" style={{color: 'var(--color-secondary)'}}>REAL STORIES</span>
+          </div>
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl mb-4" style={{color: 'var(--text-primary)'}}>
+            When people see their virtues
           </h2>
-          <p className="text-text-secondary text-body-lg max-w-2xl mx-auto">
-            How people are using Soul Virtues Extractor to understand themselves and others
-          </p>
         </div>
 
-        {/* Use Cases */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {useCases.map((useCase, index) => (
-            <div key={index} className="card-dark p-8">
-              {/* Icon */}
-              <div className="text-4xl mb-4">{useCase.icon}</div>
-
-              {/* Title */}
-              <h3 className="font-heading font-semibold text-h3 text-text-primary mb-2">
-                {useCase.title}
-              </h3>
-
-              {/* Virtue */}
-              <div className="text-neon-cyan text-sm font-semibold mb-4">
-                {useCase.virtue}
-              </div>
-
-              {/* Story */}
-              <p className="text-text-secondary text-body italic">
-                &ldquo;{useCase.story}&rdquo;
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {cases.map((c, i) => (
+            <div key={i} className="card-dark p-6 flex flex-col">
+              <div className="w-8 h-1 rounded-full mb-5" style={{background: c.color}}/>
+              <p className="text-sm leading-relaxed flex-1 mb-5" style={{color: 'var(--text-secondary)', fontStyle: 'italic'}}>
+                {c.description}
               </p>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style={{background: `${c.color}20`, color: c.color}}>
+                  {c.person.charAt(0)}
+                </div>
+                <span className="text-xs" style={{color: 'var(--text-muted)'}}>{c.person}</span>
+              </div>
             </div>
           ))}
         </div>

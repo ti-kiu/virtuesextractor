@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build && rm -rf .next/cache",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "deploy": "./deploy.sh"
   },
   "dependencies": {
     "next": "16.3.1",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

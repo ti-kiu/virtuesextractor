@@ -100,9 +100,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-6" style={{borderTop: '1px solid var(--border-primary)'}}>
-          <p className="text-xs text-center" style={{color: 'var(--text-muted)'}}>
+        <div className="pt-6 text-center" style={{borderTop: '1px solid var(--border-primary)'}}>
+          <p className="text-xs mb-2" style={{color: 'var(--text-muted)'}}>
             © 2026 VirtuesExtractor.com. All rights reserved.
+          </p>
+          <p className="text-xs" style={{color: 'var(--text-muted)', opacity: 0.7}}>
+            This is an unofficial fan project. Not affiliated with or endorsed by Toby Fox. Undertale © Toby Fox.
           </p>
         </div>
       </div>

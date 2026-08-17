@@ -1,96 +1,159 @@
 "use client";
 
+import Link from "next/link";
+
+function SoulScanner() {
+  const virtues = [
+    { name: "DET", color: "#FF6B6B", angle: 0 },
+    { name: "BRA", color: "#FF9F43", angle: 51 },
+    { name: "JUS", color: "#FFE66D", angle: 103 },
+    { name: "KIN", color: "#4ECDC4", angle: 154 },
+    { name: "PAT", color: "#45B7D1", angle: 206 },
+    { name: "INT", color: "#6C5CE7", angle: 257 },
+    { name: "PER", color: "#A55EEA", angle: 309 },
+  ];
+
+  return (
+    <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+      {/* Outer rotating ring */}
+      <div className="absolute inset-0 animate-spin" style={{animationDuration: '20s'}}>
+        <svg viewBox="0 0 320 320" className="w-full h-full">
+          <circle cx="160" cy="160" r="150" fill="none" stroke="rgba(78,205,196,0.08)" strokeWidth="1" strokeDasharray="8 4"/>
+        </svg>
+      </div>
+
+      {/* Middle ring */}
+      <div className="absolute inset-4 animate-spin" style={{animationDuration: '15s', animationDirection: 'reverse'}}>
+        <svg viewBox="0 0 300 300" className="w-full h-full">
+          <circle cx="150" cy="150" r="140" fill="none" stroke="rgba(255,107,107,0.06)" strokeWidth="1" strokeDasharray="4 8"/>
+        </svg>
+      </div>
+
+      {/* 7 virtue dots on orbit */}
+      {virtues.map((v, i) => {
+        const radius = 120;
+        const cx = 160 + radius * Math.cos((v.angle * Math.PI) / 180);
+        const cy = 160 + radius * Math.sin((v.angle * Math.PI) / 180);
+        return (
+          <div key={i} className="absolute" style={{
+            left: `${(cx / 320) * 100}%`,
+            top: `${(cy / 320) * 100}%`,
+            transform: 'translate(-50%, -50%)',
+          }}>
+            <div className="relative">
+              <div className="w-3 h-3 rounded-full animate-glow-breathe" style={{backgroundColor: v.color, color: v.color}}/>
+              <span className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[10px] font-mono font-bold whitespace-nowrap" style={{color: v.color}}>
+                {v.name}
+              </span>
+            </div>
+          </div>
+        );
+      })}
+
+      {/* Center heart */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative">
+          {/* Pulse rings */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-24 h-24 rounded-full animate-pulse-ring" style={{border: '1px solid rgba(255,107,107,0.3)'}}/>
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-24 h-24 rounded-full animate-pulse-ring" style={{border: '1px solid rgba(255,107,107,0.2)', animationDelay: '0.5s'}}/>
+          </div>
+          
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" className="animate-float">
+            <path d="M32 52C32 52 12 40 12 26C12 20 16 16 22 16C26 16 30 18.5 32 22C34 18.5 38 16 42 16C48 16 52 20 52 26C52 40 32 52 32 52Z"
+                  fill="url(#hero-heart)" stroke="rgba(255,107,107,0.6)" strokeWidth="1"/>
+            <defs>
+              <linearGradient id="hero-heart" x1="12" y1="16" x2="52" y2="52">
+                <stop offset="0%" stopColor="#FF6B6B"/>
+                <stop offset="100%" stopColor="#FF5252"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      {/* Scan line */}
+      <div className="absolute left-1/2 top-0 w-px h-full overflow-hidden" style={{transform: 'translateX(-50%)'}}>
+        <div className="w-full h-1/3 animate-scan" style={{
+          background: 'linear-gradient(to bottom, transparent, rgba(78,205,196,0.4), transparent)',
+        }}/>
+      </div>
+
+      {/* Terminal text */}
+      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-center">
+        <div className="font-mono text-[11px] px-3 py-1 rounded-md" style={{color: 'var(--color-accent)', background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)'}}>
+          <span className="animate-blink">_</span> SYSTEM READY
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="hero-inner">
-        {/* Left: Text */}
-        <div className="hero-text">
-          <div className="hero-tag">66 QUESTIONS · 7 VIRTUES · 8 MINUTES</div>
-          <h1 className="hero-title">
-            Your soul has a<br />
-            <span className="accent">signal.</span><br />
-            Let&apos;s read it.
-          </h1>
-          <p className="hero-sub">
-            Not a label. Not a type. A full seven-virtue profile — with an AI that
-            actually talks with you about what your results mean in real life.
-          </p>
-          <div className="hero-cta-group">
-            <a href="#pricing" className="btn-primary btn-lg">
-              Discover Your Virtues — Free
-            </a>
-            <a href="#how-it-works" className="btn-ghost">
-              See How It Works →
-            </a>
-          </div>
-          <div className="hero-trust">
-            <span><span className="check">✓</span> No sign-up</span>
-            <span><span className="check">✓</span> AI report included</span>
-            <span><span className="check">✓</span> 100% private</span>
-          </div>
-        </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-grid" style={{paddingTop: '80px'}}>
+      {/* Background glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full" 
+           style={{background: 'radial-gradient(circle, rgba(255,107,107,0.08) 0%, transparent 70%)'}}/>
+      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full" 
+           style={{background: 'radial-gradient(circle, rgba(78,205,196,0.05) 0%, transparent 70%)'}}/>
 
-        {/* Right: Dashboard Visualization */}
-        <div className="hero-visual">
-          <div className="dashboard">
-            <div className="dash-header">
-              <span className="dash-dot red"></span>
-              <span className="dash-dot yellow"></span>
-              <span className="dash-dot green"></span>
-              <span className="dash-title">SOUL SCANNER v2.1</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: Text */}
+          <div className="text-center lg:text-left">
+            {/* Status badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6" 
+                 style={{background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)'}}>
+              <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{background: 'var(--color-accent)'}}/>
+              <span className="text-xs font-medium" style={{color: 'var(--color-accent)'}}>66 Questions · 7 Virtues · 8 Minutes</span>
             </div>
-            <div className="dash-body">
-              <div className="dash-status">
-                <span className="status-label">STATUS:</span>
-                <span className="status-value blink">WAITING FOR INPUT</span>
-              </div>
-              
-              {/* Central heart */}
-              <div className="dash-heart-container">
-                <div className="heart-glow"></div>
-                <svg className="heart-icon" viewBox="0 0 100 100" width="80" height="80">
-                  <path d="M50 88 C25 65 5 50 5 30 C5 15 17 5 30 5 C38 5 45 10 50 18 C55 10 62 5 70 5 C83 5 95 15 95 30 C95 50 75 65 50 88Z" fill="#ff2d55"/>
+
+            <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6" style={{color: 'var(--text-primary)'}}>
+              Your soul has a{" "}
+              <span className="neon-text-red" style={{color: 'var(--color-primary)'}}>signal</span>.
+              <br/>
+              <span style={{color: 'var(--text-secondary)'}}>Let&apos;s read it.</span>
+            </h1>
+
+            <p className="text-lg sm:text-xl mb-8 max-w-xl mx-auto lg:mx-0" style={{color: 'var(--text-secondary)', lineHeight: '1.7'}}>
+              Not a label. Not a type. A full seven-virtue profile — with an AI that 
+              actually talks with you about what your results mean in real life.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
+              <Link href="/test" className="btn-primary text-base">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 1v16M1 9h16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
                 </svg>
-                <div className="heart-pulse"></div>
-              </div>
-
-              {/* 7 virtue orbs */}
-              <div className="virtue-orbs">
-                {[
-                  { name: "DET", color: "#ff2d55", angle: 0 },
-                  { name: "BRV", color: "#ff9500", angle: 51 },
-                  { name: "JUS", color: "#ffcc00", angle: 103 },
-                  { name: "KND", color: "#34c759", angle: 154 },
-                  { name: "PAT", color: "#00d4aa", angle: 206 },
-                  { name: "INT", color: "#007aff", angle: 257 },
-                  { name: "PER", color: "#af52de", angle: 309 },
-                ].map((v) => (
-                  <div
-                    key={v.name}
-                    className="virtue-orb"
-                    style={{
-                      background: v.color,
-                      boxShadow: `0 0 12px ${v.color}66, 0 0 24px ${v.color}33`,
-                      transform: `rotate(${v.angle}deg) translateY(-100px) rotate(-${v.angle}deg)`,
-                    }}
-                  >
-                    <span>{v.name}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Terminal lines */}
-              <div className="dash-terminal">
-                <div className="term-line"><span className="prompt">&gt;</span> calibrating ethical vectors...</div>
-                <div className="term-line"><span className="prompt">&gt;</span> 7 channels detected</div>
-                <div className="term-line"><span className="prompt">&gt;</span> response channel ready_</div>
-              </div>
-
-              {/* Scan lines */}
-              <div className="dash-grid"></div>
-              <div className="scan-line"></div>
+                Discover Your Virtues — Free
+              </Link>
+              <Link href="/features" className="btn-secondary text-base">
+                See How It Works
+              </Link>
             </div>
+
+            <div className="flex flex-wrap items-center gap-4 justify-center lg:justify-start text-sm" style={{color: 'var(--text-muted)'}}>
+              <span className="flex items-center gap-1.5">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#4ECDC4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                No sign-up
+              </span>
+              <span className="flex items-center gap-1.5">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#4ECDC4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                AI report included
+              </span>
+              <span className="flex items-center gap-1.5">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#4ECDC4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                100% private
+              </span>
+            </div>
+          </div>
+
+          {/* Right: Visual */}
+          <div className="flex justify-center lg:justify-end">
+            <SoulScanner />
           </div>
         </div>
       </div>

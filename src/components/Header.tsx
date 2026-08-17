@@ -49,6 +49,15 @@ export default function Header() {
             <Link href="/features" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
               Features
             </Link>
+            <Link href="/circle" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
+              Family Circle
+            </Link>
+            <Link href="/couple" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
+              Couple Match
+            </Link>
+            <Link href="/team" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
+              Team Building
+            </Link>
             <Link href="/pricing" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
               Pricing
             </Link>
@@ -74,6 +83,9 @@ export default function Header() {
           <div className="md:hidden pb-4 border-t" style={{borderColor: 'var(--border-primary)'}}>
             <div className="flex flex-col gap-1 pt-3">
               <Link href="/features" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Features</Link>
+              <Link href="/circle" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Family Circle</Link>
+              <Link href="/couple" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Couple Match</Link>
+              <Link href="/team" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Team Building</Link>
               <Link href="/pricing" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Pricing</Link>
               <Link href="/faq" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>FAQ</Link>
             </div>

@@ -44,6 +44,10 @@ export default function Footer() {
               {[
                 { href: "/test", label: "Take the Test" },
                 { href: "/features", label: "Features" },
+                { href: "/share", label: "Share Results" },
+                { href: "/circle", label: "Family Circle" },
+                { href: "/couple", label: "Couple Match" },
+                { href: "/team", label: "Team Building" },
                 { href: "/pricing", label: "Pricing" },
                 { href: "/faq", label: "FAQ" },
               ].map((link) => (

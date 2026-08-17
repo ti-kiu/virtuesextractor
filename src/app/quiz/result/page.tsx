@@ -379,7 +379,7 @@ function ResultContent() {
         </div>
 
         {/* Actions */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <a
             href={`/quiz/ask?quizId=${quizId}`}
             className="px-8 py-4 rounded-full font-semibold text-center transition-all"
@@ -411,6 +411,66 @@ function ResultContent() {
             }}
           >
             Take Again
+          </a>
+        </div>
+
+        {/* Social / Comparison Actions */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={`/share?quizId=${quizId}`}
+            className="px-6 py-3 rounded-full font-semibold text-sm text-center transition-all flex items-center justify-center gap-2"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid var(--border-primary)",
+              color: "var(--text-primary)",
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Share Results
+          </a>
+          <a
+            href={`/circle?quizId=${quizId}`}
+            className="px-6 py-3 rounded-full font-semibold text-sm text-center transition-all flex items-center justify-center gap-2"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid var(--border-primary)",
+              color: "var(--text-primary)",
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Family Circle
+          </a>
+          <a
+            href={`/couple?quizId1=${quizId}`}
+            className="px-6 py-3 rounded-full font-semibold text-sm text-center transition-all flex items-center justify-center gap-2"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid var(--border-primary)",
+              color: "var(--text-primary)",
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Couple Match
+          </a>
+          <a
+            href={`/team?quizId=${quizId}`}
+            className="px-6 py-3 rounded-full font-semibold text-sm text-center transition-all flex items-center justify-center gap-2"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid var(--border-primary)",
+              color: "var(--text-primary)",
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Team Building
           </a>
         </div>
       </div>

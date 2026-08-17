@@ -108,22 +108,36 @@ function GrowthPlanContent() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <a
-            href={`/quiz/result?quizId=${quizId}`}
-            className="inline-flex items-center gap-2 text-sm mb-4"
-            style={{ color: "var(--text-secondary)" }}
-          >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M10 12L6 8L10 4"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            Back to Results
-          </a>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <a
+              href="/"
+              className="inline-flex items-center gap-2 text-sm"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 8.5L8 3L14 8.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3.5 7.5V13H6.5V10H9.5V13H12.5V7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Home
+            </a>
+            <span style={{ color: "var(--border-primary)" }}>|</span>
+            <a
+              href={`/quiz/result?quizId=${quizId}`}
+              className="inline-flex items-center gap-2 text-sm"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M10 12L6 8L10 4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Back to Results
+            </a>
+          </div>
           <h1
             className="font-heading font-bold text-3xl sm:text-4xl mb-4"
             style={{ color: "var(--text-primary)" }}

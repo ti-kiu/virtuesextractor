@@ -166,6 +166,21 @@ function ResultContent() {
       style={{ background: "var(--bg-primary)" }}
     >
       <div className="max-w-4xl mx-auto">
+        {/* Home Link */}
+        <div className="mb-8">
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-sm"
+            style={{ color: "var(--text-secondary)" }}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 8.5L8 3L14 8.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M3.5 7.5V13H6.5V10H9.5V13H12.5V7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Back to Home
+          </a>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-12">
           <h1

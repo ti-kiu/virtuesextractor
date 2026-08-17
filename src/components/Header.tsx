@@ -49,6 +49,9 @@ export default function Header() {
             <Link href="/features" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
               Features
             </Link>
+            <Link href="/virtues" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
+              Seven Virtues
+            </Link>
             <Link href="/circle" className="px-3 py-2 rounded-lg text-sm transition-colors" style={{color: 'var(--text-secondary)'}}>
               Family Circle
             </Link>
@@ -83,6 +86,7 @@ export default function Header() {
           <div className="md:hidden pb-4 border-t" style={{borderColor: 'var(--border-primary)'}}>
             <div className="flex flex-col gap-1 pt-3">
               <Link href="/features" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Features</Link>
+              <Link href="/virtues" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Seven Virtues</Link>
               <Link href="/circle" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Family Circle</Link>
               <Link href="/couple" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Couple Match</Link>
               <Link href="/team" className="px-3 py-2.5 rounded-lg text-sm" style={{color: 'var(--text-secondary)'}}>Team Building</Link>

@@ -118,7 +118,7 @@ export default function Hero() {
               <span style={{color: 'var(--text-secondary)'}}>Let&apos;s read it.</span>
             </h1>
 
-            <p className="text-lg sm:text-xl mb-8 max-w-xl mx-auto lg:mx-0" style={{color: 'var(--text-secondary)', lineHeight: '1.7'}}>
+            <p className="text-lg sm:text-xl mb-8 max-w-xl mx-auto lg:mx-0" style={{color: 'var(--text-secondary)', lineHeight: '1.8'}}>
               Not a label. Not a type. A full seven-virtue profile — with an AI that 
               actually talks with you about what your results mean in real life.
             </p>

@@ -170,8 +170,12 @@ function ResultContent() {
         <div className="mb-8">
           <a
             href="/"
-            className="inline-flex items-center gap-2 text-sm hover:underline"
-            style={{ color: "var(--color-accent)" }}
+            className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full transition-all hover:gap-3"
+            style={{
+              color: "var(--color-accent)",
+              background: "rgba(78, 205, 196, 0.08)",
+              border: "1px solid rgba(78, 205, 196, 0.15)",
+            }}
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M2 8.5L8 3L14 8.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

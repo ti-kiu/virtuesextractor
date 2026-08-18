@@ -108,7 +108,7 @@ export default function Features() {
                 {feature.title}
               </h3>
               {/* Description */}
-              <p className="text-sm leading-relaxed" style={{color: 'var(--text-secondary)'}}>
+              <p className="text-sm leading-relaxed" style={{color: 'var(--text-secondary)', opacity: 0.9}}>
                 {feature.description}
               </p>
             </div>

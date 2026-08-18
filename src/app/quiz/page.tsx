@@ -252,17 +252,20 @@ export default function QuizPage() {
                 className="w-full text-left p-5 rounded-xl transition-all duration-200 group"
                 style={{
                   background: "var(--bg-card)",
-                  border: "1px solid var(--border-primary)",
+                  border: "1.5px solid rgba(255, 255, 255, 0.12)",
+                  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.2)",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = "var(--bg-card-hover)";
                   e.currentTarget.style.borderColor = "var(--color-primary)";
                   e.currentTarget.style.transform = "translateX(4px)";
+                  e.currentTarget.style.boxShadow = "0 4px 16px rgba(255, 107, 107, 0.2)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = "var(--bg-card)";
-                  e.currentTarget.style.borderColor = "var(--border-primary)";
+                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.12)";
                   e.currentTarget.style.transform = "translateX(0)";
+                  e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.2)";
                 }}
               >
                 <div className="flex items-start gap-4">

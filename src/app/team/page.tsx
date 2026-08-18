@@ -188,7 +188,7 @@ function TeamContent() {
       <div className="min-h-screen py-12 px-4" style={{ background: "var(--bg-primary)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="mb-8">
-            <a href="/" className="inline-flex items-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+            <a href="/" className="inline-flex items-center gap-2 text-sm hover:underline" style={{ color: "var(--color-accent)" }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -362,7 +362,7 @@ function TeamContent() {
     <div className="min-h-screen py-12 px-4" style={{ background: "var(--bg-primary)" }}>
       <div className="max-w-lg mx-auto">
         <div className="mb-8">
-          <a href="/" className="inline-flex items-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+          <a href="/" className="inline-flex items-center gap-2 text-sm hover:underline" style={{ color: "var(--color-accent)" }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -417,17 +417,17 @@ function TeamContent() {
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Team Name</label>
               <input type="text" value={teamName} onChange={(e) => setTeamName(e.target.value)} placeholder="e.g., Engineering Team"
-                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Your Name</label>
               <input type="text" value={creatorName} onChange={(e) => setCreatorName(e.target.value)} placeholder="Your display name"
-                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Your Role</label>
               <input type="text" value={creatorRole} onChange={(e) => setCreatorRole(e.target.value)} placeholder="e.g., Team Lead"
-                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
             </div>
             <button
               type="submit"
@@ -436,6 +436,8 @@ function TeamContent() {
               style={{
                 background: quizId && teamName && creatorName && creatorRole ? "var(--color-accent)" : "var(--bg-secondary)",
                 color: quizId && teamName && creatorName && creatorRole ? "white" : "var(--text-muted)",
+                opacity: quizId && teamName && creatorName && creatorRole ? 1 : 0.5,
+                cursor: quizId && teamName && creatorName && creatorRole ? "pointer" : "not-allowed",
               }}
             >
               Create Team
@@ -447,22 +449,22 @@ function TeamContent() {
               <label className="block text-sm font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Invite Code</label>
               <input type="text" value={joinCode} onChange={(e) => setJoinCode(e.target.value.toUpperCase())} placeholder="e.g., ABC123"
                 className="w-full px-4 py-3 rounded-xl text-sm font-mono tracking-widest text-center uppercase"
-                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Your Name</label>
               <input type="text" value={memberName} onChange={(e) => setMemberName(e.target.value)} placeholder="Your display name"
-                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Your Role</label>
               <input type="text" value={memberRole} onChange={(e) => setMemberRole(e.target.value)} placeholder="e.g., Developer"
-                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Your Quiz ID</label>
               <input type="text" value={joinQuizId} onChange={(e) => setJoinQuizId(e.target.value)} placeholder="From your quiz result"
-                className="w-full px-4 py-3 rounded-xl text-sm font-mono" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                className="w-full px-4 py-3 rounded-xl text-sm font-mono" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
               <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
                 Complete a quiz first to get your quiz ID
               </p>
@@ -474,6 +476,8 @@ function TeamContent() {
               style={{
                 background: joinCode && memberName && memberRole && joinQuizId ? "var(--color-primary)" : "var(--bg-secondary)",
                 color: joinCode && memberName && memberRole && joinQuizId ? "white" : "var(--text-muted)",
+                opacity: joinCode && memberName && memberRole && joinQuizId ? 1 : 0.5,
+                cursor: joinCode && memberName && memberRole && joinQuizId ? "pointer" : "not-allowed",
               }}
             >
               Join Team

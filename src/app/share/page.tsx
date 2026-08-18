@@ -169,7 +169,7 @@ function ShareContent() {
       <div className="max-w-2xl mx-auto">
         {/* Home Link */}
         <div className="mb-8">
-          <a href="/" className="inline-flex items-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+          <a href="/" className="inline-flex items-center gap-2 text-sm hover:underline" style={{ color: "var(--color-accent)" }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

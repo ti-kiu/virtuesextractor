@@ -74,8 +74,8 @@ function AskContent() {
           <div className="flex items-center gap-4">
             <a
               href="/"
-              className="flex items-center gap-2 text-sm"
-              style={{ color: "var(--text-secondary)" }}
+                            className="flex items-center gap-2 text-sm hover:underline"
+                            style={{ color: "var(--color-accent)" }}
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M2 8.5L8 3L14 8.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -86,8 +86,8 @@ function AskContent() {
             <span style={{ color: "var(--border-primary)" }}>|</span>
             <a
               href={`/quiz/result?quizId=${quizId}`}
-              className="flex items-center gap-2 text-sm"
-              style={{ color: "var(--text-secondary)" }}
+              className="flex items-center gap-2 text-sm hover:underline"
+              style={{ color: "var(--color-accent)" }}
             >
               <svg
                 width="16"
@@ -293,10 +293,10 @@ function AskContent() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask a question about your results..."
-            className="flex-1 px-4 py-3 rounded-xl text-sm outline-none"
+            className="flex-1 px-4 py-3 rounded-xl text-sm outline-none focus:ring-2 focus:ring-[#4ECDC4]"
             style={{
               background: "var(--bg-card)",
-              border: "1px solid var(--border-primary)",
+              border: "1px solid rgba(255,255,255,0.15)",
               color: "var(--text-primary)",
             }}
             disabled={loading}

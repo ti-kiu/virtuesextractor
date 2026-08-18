@@ -149,7 +149,7 @@ function CoupleContent() {
       <div className="min-h-screen py-12 px-4" style={{ background: "var(--bg-primary)" }}>
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <a href="/" className="inline-flex items-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+            <a href="/" className="inline-flex items-center gap-2 text-sm hover:underline" style={{ color: "var(--color-accent)" }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -264,7 +264,7 @@ function CoupleContent() {
     <div className="min-h-screen py-12 px-4" style={{ background: "var(--bg-primary)" }}>
       <div className="max-w-lg mx-auto">
         <div className="mb-8">
-          <a href="/" className="inline-flex items-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+          <a href="/" className="inline-flex items-center gap-2 text-sm hover:underline" style={{ color: "var(--color-accent)" }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -301,12 +301,12 @@ function CoupleContent() {
               <div>
                 <label className="block text-xs mb-1.5" style={{ color: "var(--text-muted)" }}>Name</label>
                 <input type="text" value={name1} onChange={(e) => setName1(e.target.value)} placeholder="First person's name"
-                  className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                  className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
               </div>
               <div>
                 <label className="block text-xs mb-1.5" style={{ color: "var(--text-muted)" }}>Quiz ID</label>
                 <input type="text" value={inputQuizId1} onChange={(e) => setInputQuizId1(e.target.value)} placeholder="From quiz result"
-                  className="w-full px-4 py-3 rounded-xl text-sm font-mono" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                  className="w-full px-4 py-3 rounded-xl text-sm font-mono" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
               </div>
             </div>
           </div>
@@ -323,12 +323,12 @@ function CoupleContent() {
               <div>
                 <label className="block text-xs mb-1.5" style={{ color: "var(--text-muted)" }}>Name</label>
                 <input type="text" value={name2} onChange={(e) => setName2(e.target.value)} placeholder="Second person's name"
-                  className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                  className="w-full px-4 py-3 rounded-xl text-sm" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
               </div>
               <div>
                 <label className="block text-xs mb-1.5" style={{ color: "var(--text-muted)" }}>Quiz ID</label>
                 <input type="text" value={inputQuizId2} onChange={(e) => setInputQuizId2(e.target.value)} placeholder="From quiz result"
-                  className="w-full px-4 py-3 rounded-xl text-sm font-mono" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }} required />
+                  className="w-full px-4 py-3 rounded-xl text-sm font-mono" style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }} required />
               </div>
             </div>
           </div>
@@ -340,6 +340,8 @@ function CoupleContent() {
             style={{
               background: inputQuizId1 && inputQuizId2 && name1 && name2 ? "var(--color-primary)" : "var(--bg-secondary)",
               color: inputQuizId1 && inputQuizId2 && name1 && name2 ? "white" : "var(--text-muted)",
+              opacity: inputQuizId1 && inputQuizId2 && name1 && name2 ? 1 : 0.5,
+              cursor: inputQuizId1 && inputQuizId2 && name1 && name2 ? "pointer" : "not-allowed",
             }}
           >
             Analyze Compatibility

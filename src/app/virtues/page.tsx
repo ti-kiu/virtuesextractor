@@ -153,15 +153,15 @@ export default function VirtuesPage() {
           </div>
 
           {/* Virtue Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {virtues.map((virtue) => (
               <a
                 key={virtue.slug}
                 href={`/virtues/${virtue.slug}`}
-                className="group p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
+                className="group p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
                 style={{
                   background: "var(--bg-card)",
-                  border: "1px solid var(--border-primary)",
+                  border: `1px solid ${virtue.color}30`,
                 }}
               >
                 <div className="flex items-center gap-3 mb-4">

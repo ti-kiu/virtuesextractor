@@ -162,7 +162,7 @@ function CircleContent() {
       <div className="min-h-screen py-12 px-4" style={{ background: "var(--bg-primary)" }}>
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <a href="/" className="inline-flex items-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+            <a href="/" className="inline-flex items-center gap-2 text-sm hover:underline" style={{ color: "var(--color-accent)" }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -262,7 +262,7 @@ function CircleContent() {
     <div className="min-h-screen py-12 px-4" style={{ background: "var(--bg-primary)" }}>
       <div className="max-w-lg mx-auto">
         <div className="mb-8">
-          <a href="/" className="inline-flex items-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+          <a href="/" className="inline-flex items-center gap-2 text-sm hover:underline" style={{ color: "var(--color-accent)" }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -322,7 +322,7 @@ function CircleContent() {
                 onChange={(e) => setCircleName(e.target.value)}
                 placeholder="e.g., The Smith Family"
                 className="w-full px-4 py-3 rounded-xl text-sm"
-                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }}
+                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }}
                 required
               />
             </div>
@@ -334,7 +334,7 @@ function CircleContent() {
                 onChange={(e) => setCreatorName(e.target.value)}
                 placeholder="Your display name"
                 className="w-full px-4 py-3 rounded-xl text-sm"
-                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }}
+                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }}
                 required
               />
             </div>
@@ -345,6 +345,8 @@ function CircleContent() {
               style={{
                 background: quizId && circleName && creatorName ? "var(--color-primary)" : "var(--bg-secondary)",
                 color: quizId && circleName && creatorName ? "white" : "var(--text-muted)",
+                opacity: quizId && circleName && creatorName ? 1 : 0.5,
+                cursor: quizId && circleName && creatorName ? "pointer" : "not-allowed",
               }}
             >
               Create Family Circle
@@ -360,7 +362,7 @@ function CircleContent() {
                 onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
                 placeholder="e.g., ABC123"
                 className="w-full px-4 py-3 rounded-xl text-sm font-mono tracking-widest text-center uppercase"
-                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }}
+                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }}
                 required
               />
             </div>
@@ -372,7 +374,7 @@ function CircleContent() {
                 onChange={(e) => setMemberName(e.target.value)}
                 placeholder="Your display name"
                 className="w-full px-4 py-3 rounded-xl text-sm"
-                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }}
+                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }}
                 required
               />
             </div>
@@ -384,7 +386,7 @@ function CircleContent() {
                 onChange={(e) => setJoinQuizId(e.target.value)}
                 placeholder="From your quiz result"
                 className="w-full px-4 py-3 rounded-xl text-sm font-mono"
-                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-primary)" }}
+                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid rgba(255,255,255,0.15)" }}
                 required
               />
               <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
@@ -398,6 +400,8 @@ function CircleContent() {
               style={{
                 background: joinCode && memberName && joinQuizId ? "var(--color-accent)" : "var(--bg-secondary)",
                 color: joinCode && memberName && joinQuizId ? "white" : "var(--text-muted)",
+                opacity: joinCode && memberName && joinQuizId ? 1 : 0.5,
+                cursor: joinCode && memberName && joinQuizId ? "pointer" : "not-allowed",
               }}
             >
               Join Circle

@@ -498,6 +498,18 @@ function CoupleContent() {
               </svg>
               Take the Soul Virtues Quiz
             </a>
+            {/* Related Pages */}
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <a href="/circle" className="text-xs px-3 py-1.5 rounded-full" style={{ color: "var(--text-muted)", background: "var(--bg-card)", border: "1px solid var(--border-primary)" }}>
+                Family Circle
+              </a>
+              <a href="/team" className="text-xs px-3 py-1.5 rounded-full" style={{ color: "var(--text-muted)", background: "var(--bg-card)", border: "1px solid var(--border-primary)" }}>
+                Team Building
+              </a>
+              <a href="/virtues" className="text-xs px-3 py-1.5 rounded-full" style={{ color: "var(--text-muted)", background: "var(--bg-card)", border: "1px solid var(--border-primary)" }}>
+                Seven Virtues Guide
+              </a>
+            </div>
           </div>
         </div>
       </section>

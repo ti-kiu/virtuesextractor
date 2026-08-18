@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Features — Soul Virtues Extractor",
+  description: "Seven-virtue scoring, AI deep analysis, 30-day growth plans, family circles, and more. See what makes our personality test different.",
+  alternates: {
+    canonical: "https://virtuesextractor.com/features",
+  },
+  openGraph: {
+    title: "Features — Soul Virtues Extractor",
+    description: "Seven-virtue scoring, AI deep analysis, 30-day growth plans, family circles, and more.",
+    url: "https://virtuesextractor.com/features",
+    type: "website",
+  },
+};
 
 export default function FeaturesPage() {
   return (

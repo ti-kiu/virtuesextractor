@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     "Discover your seven soul virtues with AI-powered deep analysis. No sign-up required. Takes 8 minutes.",
   keywords:
     "soul virtues extractor, soul trait extractor, virtue personality test, undertale soul quiz, seven virtues",
+  alternates: {
+    canonical: "https://virtuesextractor.com",
+  },
   openGraph: {
     title: "Soul Virtues Extractor — Free 66-Question Personality Test",
     description:
@@ -16,12 +19,21 @@ export const metadata: Metadata = {
     siteName: "VirtuesExtractor.com",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://virtuesextractor.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Soul Virtues Extractor — Discover Your Seven Soul Virtues",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Soul Virtues Extractor — Free 66-Question Personality Test",
     description:
       "Discover your seven soul virtues with AI-powered deep analysis. No sign-up required. Takes 8 minutes.",
+    images: ["https://virtuesextractor.com/og-image.jpg"],
   },
   robots: {
     index: true,

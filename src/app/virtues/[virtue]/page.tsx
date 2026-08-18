@@ -308,6 +308,9 @@ export async function generateMetadata({
       `soul virtue ${data.name.toLowerCase()}`,
       "soul virtues test",
     ],
+    alternates: {
+      canonical: `https://virtuesextractor.com/virtues/${virtue}`,
+    },
     openGraph: {
       title: `${data.name} Virtue — Meaning, Personality & Growth`,
       description: data.seoDescription,
@@ -370,11 +373,25 @@ export default async function VirtuePage({
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://virtuesextractor.com" },
+      { "@type": "ListItem", position: 2, name: "Virtues", item: "https://virtuesextractor.com/virtues" },
+      { "@type": "ListItem", position: 3, name: data.name, item: `https://virtuesextractor.com/virtues/${virtue}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <div
         className="min-h-screen py-20 px-4"

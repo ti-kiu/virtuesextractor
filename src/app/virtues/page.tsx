@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "perseverance virtue",
     "personality virtues",
   ],
+  alternates: {
+    canonical: "https://virtuesextractor.com/virtues",
+  },
   openGraph: {
     title: "The Seven Soul Virtues — Complete Guide",
     description:

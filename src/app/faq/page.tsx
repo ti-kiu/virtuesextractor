@@ -1,6 +1,21 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "FAQ — Soul Virtues Extractor",
+  description: "Frequently asked questions about the Soul Virtues Extractor test — privacy, accuracy, how it works, and what you get for free.",
+  alternates: {
+    canonical: "https://virtuesextractor.com/faq",
+  },
+  openGraph: {
+    title: "FAQ — Soul Virtues Extractor",
+    description: "Frequently asked questions about the Soul Virtues Extractor test.",
+    url: "https://virtuesextractor.com/faq",
+    type: "website",
+  },
+};
 
 const faqs = [
   {

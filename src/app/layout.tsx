@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "Soul Virtues Extractor — Free 66-Question Personality Test",
@@ -58,6 +59,7 @@ export default function RootLayout({
       </head>
       <body className="bg-bg-primary text-text-primary antialiased">
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

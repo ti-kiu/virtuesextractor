@@ -137,6 +137,12 @@ export default function VirtuesGrid() {
               </span>
             ))}
           </div>
+          {/* Authority & Sources */}
+          <div className="mt-4 pt-3" style={{ borderTop: "1px solid var(--border-primary)" }}>
+            <p className="text-[10px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              Based on Aristotelian virtue ethics and modern positive psychology research.
+            </p>
+          </div>
         </a>
       ))}
     </div>

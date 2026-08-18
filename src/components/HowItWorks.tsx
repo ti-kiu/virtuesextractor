@@ -201,6 +201,9 @@ export default function HowItWorks() {
           <Link href="/quiz" className="btn-primary text-base">
             Start Your Soul Journey
           </Link>
+          <p className="mt-4 text-xs" style={{ color: "var(--text-muted)" }}>
+            Based on Aristotelian virtue ethics and modern positive psychology research.
+          </p>
         </div>
       </div>
     </section>

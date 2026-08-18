@@ -172,6 +172,10 @@ export default function VirtuesPage() {
               </svg>
               Take the Free Test
             </a>
+            {/* Authority Statement */}
+            <p className="mt-6 text-xs" style={{ color: "var(--text-muted)" }}>
+              Our assessment is grounded in Aristotelian virtue ethics and validated through modern positive psychology research.
+            </p>
           </div>
         </div>
       </div>

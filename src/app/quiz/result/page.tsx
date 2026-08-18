@@ -382,35 +382,34 @@ function ResultContent() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <a
             href={`/quiz/ask?quizId=${quizId}`}
-            className="px-8 py-4 rounded-full font-semibold text-center transition-all"
-            style={{
-              background: "var(--color-primary)",
-              color: "white",
-            }}
+            className="btn-primary px-8 py-4 text-center"
           >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
+              <path d="M12 17h.01" />
+            </svg>
             Ask AI a Question
           </a>
           <a
             href={`/quiz/growth-plan?quizId=${quizId}`}
-            className="px-8 py-4 rounded-full font-semibold text-center transition-all"
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border-primary)",
-              color: "var(--text-primary)",
-            }}
+            className="btn-secondary px-8 py-4 text-center"
           >
-            Get 30-Day Growth Plan
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
+            30-Day Growth Plan
           </a>
           <a
             href="/quiz"
-            className="px-8 py-4 rounded-full font-semibold text-center transition-all"
-            style={{
-              background: "transparent",
-              border: "1px solid var(--border-primary)",
-              color: "var(--text-secondary)",
-            }}
+            className="btn-ghost px-8 py-4 text-center"
           >
-            Take Again
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M1 4v6h6" />
+              <path d="M3.51 15a9 9 0 102.13-9.36L1 10" />
+            </svg>
+            Retake Quiz
           </a>
         </div>
 

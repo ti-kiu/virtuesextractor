@@ -1,0 +1,37 @@
+# Soul Virtues Extractor
+
+> Free 66-question personality test that reveals your seven soul virtues profile with AI-powered deep analysis.
+
+## What We Offer
+
+Soul Virtues Extractor is a free online personality test based on Aristotelian virtue ethics and modern positive psychology. Users answer 66 scenario-based questions and receive:
+
+- **Seven-Virtue Profile**: Percentage breakdown across Determination, Bravery, Justice, Kindness, Patience, Integrity, and Perseverance
+- **AI Deep Analysis**: Personalized interpretation of results with follow-up questions
+- **30-Day Growth Plan**: Custom daily plan based on lowest virtue
+- **Family Circles**: Compare virtues with family, partner, or friends
+- **Couple Match**: See how two people's virtues connect
+- **Team Building**: Analyze team virtue dynamics
+
+## Key Features
+
+- 100% free, no sign-up required
+- AI-powered analysis included
+- 100% private - results stay on device
+- 8 minutes to complete
+- Mobile-friendly
+
+## Pages
+
+- [Home](https://virtuesextractor.com/) - Landing page with features overview
+- [Start Quiz](https://virtuesextractor.com/quiz) - Take the 66-question test
+- [Seven Virtues](https://virtuesextractor.com/virtues) - Learn about each virtue
+- [Family Circle](https://virtuesextractor.com/circle) - Family virtue comparison
+- [Couple Match](https://virtuesextractor.com/couple) - Partner virtue analysis
+- [Team Building](https://virtuesextractor.com/team) - Team virtue dynamics
+- [FAQ](https://virtuesextractor.com/faq) - Common questions
+
+## Contact
+
+- Website: https://virtuesextractor.com
+- Email: fuyuanzeng520@gmail.com

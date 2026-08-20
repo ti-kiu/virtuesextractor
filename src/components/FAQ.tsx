@@ -50,8 +50,19 @@ function FAQItem({ q, a, isOpen, onClick }: { q: string; a: string; isOpen: bool
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  };
+
   return (
     <section className="py-20 sm:py-28 relative" style={{background: 'var(--bg-secondary)'}}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

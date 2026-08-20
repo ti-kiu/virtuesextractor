@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Product */}
           <div>
-            <h4 className="font-heading font-semibold text-xs uppercase tracking-wider mb-4" style={{color: 'var(--text-muted)'}}>Product</h4>
+            <h3 className="font-heading font-semibold text-xs uppercase tracking-wider mb-4" style={{color: 'var(--text-muted)'}}>Product</h3>
             <ul className="space-y-2.5">
               {[
                 { href: "/test", label: "Take the Test" },
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-heading font-semibold text-xs uppercase tracking-wider mb-4" style={{color: 'var(--text-muted)'}}>Legal</h4>
+            <h3 className="font-heading font-semibold text-xs uppercase tracking-wider mb-4" style={{color: 'var(--text-muted)'}}>Legal</h3>
             <ul className="space-y-2.5">
               {[
                 { href: "/privacy", label: "Privacy Policy" },
@@ -81,9 +81,10 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="font-heading font-semibold text-xs uppercase tracking-wider mb-4" style={{color: 'var(--text-muted)'}}>Connect</h4>
+            <h3 className="font-heading font-semibold text-xs uppercase tracking-wider mb-4" style={{color: 'var(--text-muted)'}}>Connect</h3>
             <ul className="space-y-2.5">
               {[
+                { href: "mailto:hello@virtuesextractor.com", label: "Contact Us" },
                 { href: "https://twitter.com/virtuesextractor", label: "Twitter" },
                 { href: "https://instagram.com/virtuesextractor", label: "Instagram" },
                 { href: "https://tiktok.com/@virtuesextractor", label: "TikTok" },
